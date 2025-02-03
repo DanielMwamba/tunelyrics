@@ -10,10 +10,12 @@ export default async function SearchResultsPage({ params }: { params: { query: s
   }
   
   const data = await res.json();
+  console.log(data)
 
   return (
     <div className="container mx-auto px-4 py-8">
       <SearchResultsWrapper results={data.response.hits} query={query} />
+      
     </div>
   );
 }
